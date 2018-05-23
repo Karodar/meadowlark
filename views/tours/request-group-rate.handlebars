@@ -1,0 +1,16 @@
+<h1>Запрос цены для групп</h1>
+<form>
+    <input type="hidden" name="referrer">
+    Название: <input type="text" name="name" id="fieldName">
+    Размер группы: <input type="text" name="groupSize">
+    Электронная почта: <input type="email" name="email">
+    <input type="submit" value="Submit">
+</form>
+{{#section 'jquery'}}
+    <script>
+        $(document).ready(function() {
+            $('input[name="referrer"]').val(document.referrer);
+            console.log('Work script on Request Page!');
+        });
+    </script>
+{{/section}}
